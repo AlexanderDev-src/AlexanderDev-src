@@ -1,4 +1,4 @@
-## ❤️ $16\sin^3{t}$ , $13\cos{t} - 5\cos{3t} - \cos{4t}$ ❤️
+### Hi!, I'm 'First' but please call me Alex
 
 <!--
 **AlexanderDev-src/AlexanderDev-src** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
