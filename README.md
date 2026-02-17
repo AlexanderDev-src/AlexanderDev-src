@@ -1,4 +1,4 @@
-### Hi!, I'm 'First' but please call me Alex
+### Hi, I'm 'First' but please call me Alex! 🫶
 
 <!--
 **AlexanderDev-src/AlexanderDev-src** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
