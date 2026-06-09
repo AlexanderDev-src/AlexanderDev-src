@@ -11,7 +11,7 @@ This profile is a collection of my progress, from my humble beginnings to everyt
 
 ### Programing Languages
 
-[![My Skills](https://skillicons.dev/icons?i=java,c,cpp,python)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=rust,java,c,cpp,python)](https://skillicons.dev)
 
 ### OS && Tool
 
