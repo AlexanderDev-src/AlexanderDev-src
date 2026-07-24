@@ -23,7 +23,7 @@ This profile is a collection of my progress, from my humble beginnings to everyt
 
 - I love Cat sooooo muchhhh😻
 
-- In my free time, I love coding small projects for fun.
+- Hmmm.... 🤔
 
 - NO Coffee, NO Life
 
