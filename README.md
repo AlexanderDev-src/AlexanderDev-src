@@ -1,32 +1,94 @@
-<img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" width="40" /> Hello, I'm Alexander Sanford
-========================================================================================================================================
+<h1 align="center">
+  <img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" width="40" />
+  Hi there,  I'm Alexander
+</h1>
 
-### About me🌠
+<div align="center">
+<h3>  Alexander Sanford | 💻 Computer Science Student @ KKU |  TH 👋</h3>
+</div>
 
-Hello, I'm Alex! , Computer Science student🫶
+<h3 align="center">About me</h3>
 
-I'm majoring in Computer Science at Khon Kaen University.
+> I'm a Computer Science student at Khon Kaen University, currently working my way
+> through systems programming, backend development, and everything in between.
+>
+> Most of my time goes into backend work Spring Boot with Clean Architecture on the
+> Java side, and Rust when I want to understand what's actually happening underneath.
+> I like the kind of problems where the answer isn't just "make it work" but "make it
+> work for the right reasons."
+>
+> Outside of coursework I run a small software house building custom solutions for
+> small and medium businesses, which is where most of my practical lessons come from.
+>
+> This profile is a collection of my progress from my humble beginnings to
+> everything yet to come.
 
-This profile is a collection of my progress, from my humble beginnings to everything yet to come.
+<h3 align="center">Tech Stack</h3>
 
-### Programing Languages / FrontEnd / Markup Langauge
+<p align="center">
+  <b>Languages & Frameworks</b><br>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,js,react&perline=8&theme=dark" /></a>
+</p>
 
-[![My Skills](https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,html,css,tailwind,js,react)](https://skillicons.dev)
+<p align="center">
+  <b>Frontend & Markup</b><br>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html,css,tailwind&perline=8&theme=dark" /></a>
+</p>
 
-### OS / Tool
+<p align="center">
+  <b>Database</b><br>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=postgres,sqlite,mysql,mongodb&perline=8&theme=dark" /></a>
+</p>
 
-[![My Skills](https://skillicons.dev/icons?i=arch,neovim,vim)](https://skillicons.dev)
+<p align="center">
+  <b>OS & Tools</b><br>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arch,neovim,vim,git&perline=8&theme=dark" /></a>
+</p>
 
-### Funfact
+<div align="center">
+<details>
+<summary><b>GitHub Stats</b></summary>
+<br>
 
-- I started with zero coding experience before university
+![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin)
+![Contribution Sparkline](https://ghstats.dev/api/sparkline?username=AlexanderDev-src&theme=catppuccin&days=30&width=320&height=145)
 
-- I love Cat sooooo muchhhh😻
+![GitHub Stats Card](https://ghstats.dev/api/card?username=AlexanderDev-src&theme=catppuccin&hide_border=true&border_radius=37)
 
-- Hmmm.... 🤔
+</details>
+</div>
 
-- NO Coffee, NO Life
+<div align="center">
+<details>
+<summary><b>Fun Facts</b></summary>
+<br>
 
+<div align="left">
+
+> - Daily driving **Arch Linux + Hyprland** — ported my whole config to the new Lua format
+> - Editors are **Neovim** and **Zed**, in **Zsh**
+> - Currently learning **German** 🇩🇪 **English**
+> - Notes live in **Obsidian**, cross-linked between courses
+
+</div>
+
+</details>
+</div>
+
+<div align="center">
+<details>
+<summary><b>Off the Clock</b></summary>
+<br>
+
+<div align="left">
+
+> - **Games:** Wuthering Waves · Valorant · Genshin Impact · ZZZ
+
+</div>
+
+</details>
+</div>
+<img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" />
 
 
 <!--
