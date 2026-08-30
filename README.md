@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" width="40" />
+  <img src="https://media.tenor.com/lU_m3-HK2mgAAAAj/cheers-mafumafu.gif" width="100"/>
   Hi there,  I'm Alexander
 </h1>
 
