@@ -24,11 +24,12 @@
 
 <p align="center">
   <a href="mailto:alexander.sanford.contact@pm.me">
-    <img src="https://img.shields.io/badge/Email-2E3440?style=for-the-badge&logo=protonmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Contact_Me-2E3440?style=for-the-badge&logo=protonmail&logoColor=white" />
   </a>
-  <a href="https://github.com/AlexanderDev-src">
-    <img src="https://img.shields.io/badge/GitHub-2E3440?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
+</p>
+
+<p align="center">
+  <sub>alexander.sanford.contact@pm.me</sub>
 </p>
 
 <h3 align="center">Tech Stack</h3>
