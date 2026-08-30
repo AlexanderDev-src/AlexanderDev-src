@@ -9,13 +9,13 @@ I'm majoring in Computer Science at Khon Kaen University.
 
 This profile is a collection of my progress, from my humble beginnings to everything yet to come.
 
-### Programing Languages
+### Programing Languages / FrontEnd / Markup Langauge
 
-[![My Skills](https://skillicons.dev/icons?i=rust,java,c,cpp,python)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,html,css,tailwind,ts,react)](https://skillicons.dev)
 
-### OS && Tool
+### OS / Tool
 
-[![My Skills](https://skillicons.dev/icons?i=arch,neovim)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=arch,neovim,vim)](https://skillicons.dev)
 
 ### Funfact
 
