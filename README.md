@@ -17,9 +17,6 @@
 > I like the kind of problems where the answer isn't just "make it work" but "make it
 > work for the right reasons."
 >
-> Outside of coursework I run a small software house building custom solutions for
-> small and medium businesses, which is where most of my practical lessons come from.
->
 > This profile is a collection of my progress from my humble beginnings to
 > everything yet to come.
 
