@@ -20,6 +20,17 @@
 > This profile is a collection of my progress from my humble beginnings to
 > everything yet to come.
 
+<h3 align="center">Contact</h3>
+
+<p align="center">
+  <a href="mailto:alexander.contect@pm.me">
+    <img src="https://img.shields.io/badge/Email-2E3440?style=for-the-badge&logo=protonmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/AlexanderDev-src">
+    <img src="https://img.shields.io/badge/GitHub-2E3440?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
 <h3 align="center">Tech Stack</h3>
 
 <p align="center">
