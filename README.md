@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)Hello, I'm Alexander Sanford
+<img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" width="40" /> Hello, I'm Alexander Sanford
 ========================================================================================================================================
 
 ### About me🌠
