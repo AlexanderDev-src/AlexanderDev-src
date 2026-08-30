@@ -23,7 +23,7 @@
 <h3 align="center">Contact</h3>
 
 <p align="center">
-  <a href="mailto:alexander.contect@pm.me">
+  <a href="mailto:alexander.sanford.contact@pm.me">
     <img src="https://img.shields.io/badge/Email-2E3440?style=for-the-badge&logo=protonmail&logoColor=white" />
   </a>
   <a href="https://github.com/AlexanderDev-src">
