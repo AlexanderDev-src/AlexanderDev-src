@@ -11,7 +11,7 @@ This profile is a collection of my progress, from my humble beginnings to everyt
 
 ### Programing Languages / FrontEnd / Markup Langauge
 
-[![My Skills](https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,html,css,tailwind,ts,react)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,html,css,tailwind,js,react)](https://skillicons.dev)
 
 ### OS / Tool
 
