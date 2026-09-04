@@ -1,4 +1,4 @@
-w<h1 align="center">
+<h1 align="center">
   <img src="https://media.tenor.com/lU_m3-HK2mgAAAAj/cheers-mafumafu.gif" width="100"/>
   Hi there,  I'm Alexander
 </h1>
