@@ -1,4 +1,4 @@
-<h1 align="center">
+w<h1 align="center">
   <img src="https://media.tenor.com/lU_m3-HK2mgAAAAj/cheers-mafumafu.gif" width="100"/>
   Hi there,  I'm Alexander
 </h1>
@@ -41,7 +41,7 @@
 
 <p align="center">
   <b>Frontend & Markup</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html,css,tailwind,markdown,latex&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html,css,tailwind,vite,markdown,latex&perline=8&theme=dark" /></a>
 </p>
 
 <p align="center">
