@@ -71,7 +71,7 @@
 
 [![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/Alexander_SanF)
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/1st_Alexander?theme=dark&font=Macondo&ext=heatmap)
+![LeetCode Stats](https://leetcard.jacoblin.cool/alexandernullptr?theme=dark&font=Macondo&ext=heatmap)
 
 </details>
 </div>
