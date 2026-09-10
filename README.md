@@ -61,13 +61,17 @@
 
 <div align="center">
 <details>
-<summary><b>GitHub Stats</b></summary>
+<summary><b>Github & More Stats</b></summary>
 <br>
 
 ![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin)
 ![Contribution Sparkline](https://ghstats.dev/api/sparkline?username=AlexanderDev-src&theme=catppuccin&days=30&width=320&height=145)
 
 ![GitHub Stats Card](https://ghstats.dev/api/card?username=AlexanderDev-src&theme=catppuccin&hide_border=true&border_radius=37)
+
+[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/Alexander_SanF)
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/1st_Alexander?theme=dark&font=Macondo&ext=heatmap)
 
 </details>
 </div>
