@@ -9,16 +9,15 @@
 
 <h3 align="center">About me</h3>
 
-> I'm a Computer Science student at Khon Kaen University, currently working my way
-> through systems programming, backend development, and everything in between.
->
-> Most of my time goes into backend work Spring Boot with Clean Architecture on the
-> Java side, and Rust when I want to understand what's actually happening underneath.
-> I like the kind of problems where the answer isn't just "make it work" but "make it
-> work for the right reasons."
->
-> This profile is a collection of my progress from my humble beginnings to
-> everything yet to come.
+<p align="left">
+  I'm Alexander, 20, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
+  Outside of coursework I build things because I'd rather understand a system than just use it —
+  that curiosity is most of what shows up in these repos.
+</p>
+
+<p align="left">
+  This profile is a collection of my progress, from my humble beginnings to everything yet to come.
+</p>
 
 <h3 align="center">Contact</h3>
 
@@ -32,7 +31,10 @@
   <sub>alexander.sanford.contact@pm.me</sub>
 </p>
 
-<h3 align="center">Tech Stack</h3>
+<div align="center">
+<details>
+<summary><b>Tech Stack 🩷</b></summary>
+<br>
 
 <p align="center">
   <b>Languages & Frameworks</b><br>
@@ -58,6 +60,8 @@
   <b>OS & Tools</b><br>
   <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arch,neovim,vim,git,docker,postman&perline=8&theme=dark" /></a>
 </p>
+</details>
+</div>
 
 <div align="center">
 <details>
