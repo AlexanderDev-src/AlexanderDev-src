@@ -10,7 +10,7 @@
 <h3 align="center">About me</h3>
 
 <p align="left">
-  I'm Alexander, 20, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
+  I'm Alexander, born 2006, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
   Outside of coursework I build things because I'd rather understand a system than just use it —
   that curiosity is most of what shows up in these repos.
 </p>
