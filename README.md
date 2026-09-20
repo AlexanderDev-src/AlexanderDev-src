@@ -68,8 +68,7 @@
 <summary><b>Github & More Stats</b></summary>
 <br>
 
-![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin)
-![Contribution Sparkline](https://ghstats.dev/api/sparkline?username=AlexanderDev-src&theme=catppuccin&days=30&width=320&height=145)
+![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin&hide_border=true&hide_title=true&max_langs=12&layout=grid)
 
 ![GitHub Stats Card](https://ghstats.dev/api/card?username=AlexanderDev-src&theme=catppuccin&hide_border=true&border_radius=37)
 
