@@ -1,6 +1,8 @@
 <h1 align="center">
-  <img src="https://media.tenor.com/lU_m3-HK2mgAAAAj/cheers-mafumafu.gif" width="100"/>
-  Hi there,  I'm Alexander
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://coolreadme.xyz/api/typing-card?user=AlexanderDev-src&lines=Hi%20I%20am%20Alexander%7CRust%20%2F%20Cpp%20%2F%20Java%7CPython%20%2F%20TypeScript%20%2F%20React%7CTurning%20ideas%20into%20software%7CAlways%20learning%2C%20always%20shipping&theme=dark">
+  <img alt="typing intro" src="https://coolreadme.xyz/api/typing-card?user=AlexanderDev-src&lines=Hi%20I%20am%20Alexander%7CRust%20%2F%20Cpp%20%2F%20Java%7CPython%20%2F%20TypeScript%20%2F%20React%7CTurning%20ideas%20into%20software%7CAlways%20learning%2C%20always%20shipping&theme=light">
+</picture>
 </h1>
 
 <div align="center">
@@ -8,6 +10,8 @@
 </div>
 
 <h3 align="center">About me</h3>
+
+
 
 <p align="left">
   I'm Alexander, born 2006, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
@@ -31,10 +35,13 @@
   <sub>alexander.sanford.contact@pm.me</sub>
 </p>
 
+<div  align="center">
+  
+  ![Claude Code Terminal](https://coolreadme.xyz/api/claude-code-card-svg?user=AlexanderDev-src&handle=AlexanderDev-src&model=claude-fable-10&branch=main&workdir=my-project&command=claude%20%22implement%20auth%20middleware%22)
+  
+</div>
+
 <div align="center">
-<details>
-<summary><b>Tech Stack 🩷</b></summary>
-<br>
 
 <p align="center">
   <b>Languages & Frameworks</b><br>
@@ -58,9 +65,8 @@
 
 <p align="center">
   <b>OS & Tools</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arch,neovim,vim,git,docker,postman&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arch,neovim,git,docker,postman&perline=8&theme=dark" /></a>
 </p>
-</details>
 </div>
 
 <div align="center">
