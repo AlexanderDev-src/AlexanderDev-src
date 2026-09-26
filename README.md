@@ -71,16 +71,10 @@
 
 <div align="center">
 <details>
-<summary><b>Github & More Stats</b></summary>
+<summary><b>Simple things</b></summary>
 <br>
-
+  
 ![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin&hide_border=true&hide_title=true&max_langs=12&layout=grid)
-
-![GitHub Stats Card](https://ghstats.dev/api/card?username=AlexanderDev-src&theme=catppuccin&hide_border=true&border_radius=37)
-
-[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/Alexander_SanF)
-
-![LeetCode Stats](https://leetcard.jacoblin.cool/alexandernullptr?theme=dark&font=Macondo&ext=heatmap)
 
 </details>
 </div>
