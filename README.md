@@ -44,27 +44,27 @@
 
 <p align="center">
   <b>Languages & Frameworks</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=rust,java,cpp,c,python,ts,js,react&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/languages.svg" alt="Rust, Java, C++, C, Python, TypeScript, JavaScript, React" /></a>
 </p>
 
 <p align="center">
   <b>Frontend & Markup</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=html,css,tailwind,vite,markdown,latex&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/frontend.svg" alt="HTML, CSS, Tailwind, Vite, Markdown, LaTeX" /></a>
 </p>
 
 <p align="center">
   <b>Backend</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=spring&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/backend.svg" alt="Spring" /></a>
 </p>
 
 <p align="center">
   <b>Database</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=postgres,sqlite,mysql,mongodb&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/database.svg" alt="PostgreSQL, SQLite, MySQL, MongoDB" /></a>
 </p>
 
 <p align="center">
   <b>OS & Tools</b><br>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arch,neovim,git,docker,postman&perline=8&theme=dark" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/tools.svg" alt="Arch Linux, Neovim, Git, Docker, Postman" /></a>
 </p>
 </div>
 
