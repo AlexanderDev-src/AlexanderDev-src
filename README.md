@@ -12,7 +12,6 @@
 <h3 align="center">About me</h3>
 
 
-
 <p align="left">
   I'm Alexander, born 2006, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
   Outside of coursework I build things because I'd rather understand a system than just use it —
@@ -33,6 +32,12 @@
 
 <p align="center">
   <sub>alexander.sanford.contact@pm.me</sub>
+</p>
+
+<p align="center">
+  <a href="https://alexanderdev-src.github.io/">
+    <img src="./assets/portfolio-button.svg" alt="Visit my portfolio — alexanderdev-src.github.io" width="460" />
+  </a>
 </p>
 
 <div  align="center">
