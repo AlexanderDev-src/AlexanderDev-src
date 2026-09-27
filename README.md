@@ -40,12 +40,6 @@
   </a>
 </p>
 
-<div  align="center">
-  
-  ![Claude Code Terminal](https://coolreadme.xyz/api/claude-code-card-svg?user=AlexanderDev-src&handle=AlexanderDev-src&model=claude-fable-10&branch=main&workdir=my-project&command=claude%20%22implement%20auth%20middleware%22)
-  
-</div>
-
 <div align="center">
 
 <p align="center">
