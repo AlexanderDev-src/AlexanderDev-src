@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="124" viewBox="0 0 536 124" role="img" aria-labelledby="t">
+  <title id="t">Visit Alexander Sanford's portfolio — alexanderdev-src.github.io</title>
+  <defs>
+    <!-- Catppuccin Mocha -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1e2e"/>
+      <stop offset="1" stop-color="#11111b"/>
+    </linearGradient>
+
+    <!-- flowing border colours (first stop = last stop so the repeat is seamless) -->
+    <linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="268" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#cba6f7"/>
+      <stop offset=".25" stop-color="#f5c2e7"/>
+      <stop offset=".5" stop-color="#fab387"/>
+      <stop offset=".75" stop-color="#74c7ec"/>
+      <stop offset="1" stop-color="#cba6f7"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="248 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cba6f7"/>
+      <stop offset="1" stop-color="#f5c2e7"/>
+    </linearGradient>
+
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#cdd6f4" fill-opacity=".07"/>
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="soft" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+
+    <clipPath id="pill">
+      <rect x="20" y="20" width="496" height="84" rx="42"/>
+    </clipPath>
+
+    <path id="edge" d="M62 20H474A42 42 0 0 1 474 104H62A42 42 0 0 1 62 20Z"/>
+
+    <text id="label" x="106" y="59" textLength="305" lengthAdjust="spacingAndGlyphs"
+          font-family="'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, Inter, Roboto, 'Helvetica Neue', Arial, sans-serif"
+          font-size="22" font-weight="800">VISIT MY PORTFOLIO</text>
+  </defs>
+
+  <style>
+    .halo   { animation: breathe 3s ease-in-out infinite; }
+    .comet  { animation: orbit 5s linear infinite; }
+    .shine  { animation: sweep 4s cubic-bezier(.6,0,.2,1) infinite; }
+    .ga     { animation: glitchA 5s steps(1,end) infinite; }
+    .gb     { animation: glitchB 5s steps(1,end) infinite; }
+    .arrow  { animation: nudge 1.4s ease-in-out infinite; }
+    .cursor { animation: blink 1.1s steps(1,end) infinite; }
+
+    @keyframes breathe { 0%,100% { opacity: .35 } 50% { opacity: .75 } }
+    @keyframes orbit   { to { stroke-dashoffset: -100 } }
+    @keyframes sweep   { 0% { transform: translateX(-140px) } 40%,100% { transform: translateX(640px) } }
+    @keyframes glitchA {
+      0%,86%,96%,100% { transform: translate(0,0) }
+      88% { transform: translate(-4px,1px) }
+      90% { transform: translate(3px,-1px) }
+      92% { transform: translate(-2px,0) }
+      94% { transform: translate(4px,1px) }
+    }
+    @keyframes glitchB {
+      0%,86%,96%,100% { transform: translate(0,0) }
+      88% { transform: translate(4px,-1px) }
+      90% { transform: translate(-3px,1px) }
+      92% { transform: translate(2px,0) }
+      94% { transform: translate(-4px,-1px) }
+    }
+    @keyframes nudge { 0%,100% { transform: translateX(0) } 50% { transform: translateX(4px) } }
+    @keyframes blink { 0%,50% { opacity: 1 } 51%,100% { opacity: 0 } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .halo, .comet, .shine, .ga, .gb, .arrow, .cursor { animation: none }
+      .shine { display: none }
+    }
+  </style>
+
+  <!-- outer glow -->
+  <use href="#edge" class="halo" fill="none" stroke="url(#flow)" stroke-width="6" filter="url(#glow)"/>
+
+  <!-- body -->
+  <rect x="20" y="20" width="496" height="84" rx="42" fill="url(#bg)"/>
+  <rect x="20" y="20" width="496" height="84" rx="42" fill="url(#dots)"/>
+
+  <!-- shimmer sweep -->
+  <g clip-path="url(#pill)">
+    <g class="shine">
+      <rect x="0" y="0" width="90" height="124" fill="url(#shine)" transform="skewX(-22)"/>
+    </g>
+  </g>
+
+  <!-- flowing border -->
+  <use href="#edge" fill="none" stroke="url(#flow)" stroke-width="2.5"/>
+
+  <!-- two comets orbiting the border -->
+  <path class="comet" d="M62 20H474A42 42 0 0 1 474 104H62A42 42 0 0 1 62 20Z" fill="none" stroke="#f5e0dc"
+        stroke-width="5" stroke-linecap="round" pathLength="100" stroke-dasharray="7 43" filter="url(#soft)" opacity=".9"/>
+  <path class="comet" d="M62 20H474A42 42 0 0 1 474 104H62A42 42 0 0 1 62 20Z" fill="none" stroke="#ffffff"
+        stroke-width="2" stroke-linecap="round" pathLength="100" stroke-dasharray="7 43"/>
+
+  <!-- terminal prompt badge -->
+  <circle cx="62" cy="62" r="27" fill="#313244" stroke="#45475a" stroke-width="1.5"/>
+  <path d="M50 53L58 62L50 71" fill="none" stroke="#cba6f7" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="cursor" x="62" y="68" width="11" height="3.2" rx="1.2" fill="#f5c2e7"/>
+
+  <!-- label with RGB-split glitch -->
+  <use href="#label" class="ga" fill="#f38ba8" opacity=".85"/>
+  <use href="#label" class="gb" fill="#74c7ec" opacity=".85"/>
+  <use href="#label" fill="#cdd6f4"/>
+
+  <text x="107" y="81" textLength="206" lengthAdjust="spacingAndGlyphs"
+        font-family="ui-monospace, 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace"
+        font-size="13" fill="#a6adc8">alexanderdev-src.github.io</text>
+
+  <!-- arrow button -->
+  <circle cx="470" cy="62" r="24" fill="url(#btn)"/>
+  <g class="arrow">
+    <path d="M460 62H479M472 55L479 62L472 69" fill="none" stroke="#11111b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
