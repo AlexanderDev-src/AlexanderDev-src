@@ -1,7 +1,7 @@
 <h1 align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://coolreadme.xyz/api/typing-card?user=AlexanderDev-src&lines=Hi%20I%20am%20Alexander%7CRust%20%2F%20Cpp%20%2F%20Java%7CPython%20%2F%20TypeScript%20%2F%20React%7CTurning%20ideas%20into%20software%7CAlways%20learning%2C%20always%20shipping&theme=dark">
-  <img alt="typing intro" src="https://coolreadme.xyz/api/typing-card?user=AlexanderDev-src&lines=Hi%20I%20am%20Alexander%7CRust%20%2F%20Cpp%20%2F%20Java%7CPython%20%2F%20TypeScript%20%2F%20React%7CTurning%20ideas%20into%20software%7CAlways%20learning%2C%20always%20shipping&theme=light">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/typing-dark.svg">
+  <img alt="Hi, I'm Alexander Sanford" src="./assets/typing-light.svg">
 </picture>
 </h1>
 
