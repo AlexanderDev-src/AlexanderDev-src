@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/icons", "destination": "/api/icons" },
+    { "source": "/list", "destination": "/api/list" }
+  ],
+  "functions": {
+    "api/*.js": { "includeFiles": "lib/**" }
+  }
+}

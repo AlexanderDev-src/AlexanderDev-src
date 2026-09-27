@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animated Skill Icons</title>
+<meta name="description" content="Pick your tech stack and get an animated icon row for your GitHub README.">
+<link rel="icon" href="/icons?i=rust&anim=none&size=32">
+<style>
+  :root {
+    --base: #1e1e2e; --mantle: #181825; --crust: #11111b; --s0: #313244; --s1: #45475a; --o0: #6c7086;
+    --text: #cdd6f4; --sub: #a6adc8; --accent: #cba6f7; --accent2: #f5c2e7; --ok: #a6e3a1; --warn: #fab387;
+    --on-accent: #11111b; --radius: 14px;
+    --mono: ui-monospace, "JetBrains Mono", "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --base: #eff1f5; --mantle: #e6e9ef; --crust: #dce0e8; --s0: #ccd0da; --s1: #bcc0cc; --o0: #9ca0b0;
+      --text: #4c4f69; --sub: #6c6f85; --accent: #8839ef; --accent2: #ea76cb; --ok: #40a02b; --warn: #fe640b;
+      --on-accent: #ffffff; color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--base); color: var(--text);
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  header {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 18px 24px; border-bottom: 1px solid var(--s0); background: var(--mantle);
+  }
+  header img { display: block; }
+  header h1 { margin: 0; font-size: 20px; letter-spacing: .2px; }
+  header .tag { color: var(--sub); font-size: 13px; }
+  header .tag b { color: var(--text); font-weight: 600; }
+
+  main { display: grid; grid-template-columns: minmax(340px, 440px) 1fr; gap: 0; min-height: calc(100vh - 70px); }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+
+  /* ---------- builder ---------- */
+  .builder { border-right: 1px solid var(--s0); background: var(--mantle); }
+  .builder-inner { position: sticky; top: 0; max-height: 100vh; overflow: auto; padding: 20px 22px 40px; }
+  @media (max-width: 900px) { .builder { border-right: 0; border-bottom: 1px solid var(--s0); } .builder-inner { position: static; max-height: none; } }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--sub); margin: 22px 0 10px; font-weight: 700; }
+  h2:first-child { margin-top: 0; }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 22px 0 10px; }
+  .head:first-child { margin-top: 0; }
+  .head h2 { margin: 0; }
+  .row { display: flex; align-items: center; gap: 10px; }
+  .spread { justify-content: space-between; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; min-height: 44px; padding: 8px; border: 1px dashed var(--s1); border-radius: var(--radius); }
+  .chips:empty::before { content: "Click icons on the right to add them. Drag chips to reorder."; color: var(--o0); font-size: 13px; padding: 4px 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px; padding: 3px 4px 3px 3px; border-radius: 10px;
+    background: var(--s0); cursor: grab; user-select: none; font-size: 13px; font-family: var(--mono);
+  }
+  .chip img { width: 24px; height: 24px; border-radius: 6px; }
+  .chip.dragging { opacity: .4; }
+  .chip.bad { outline: 1px solid var(--warn); }
+  .chip button { border: 0; background: none; cursor: pointer; color: var(--sub); padding: 0 4px; font-size: 15px; line-height: 1; border-radius: 6px; }
+  .chip button:hover { color: var(--text); background: var(--s1); }
+
+  .import { display: flex; gap: 6px; margin-top: 8px; }
+  input[type="text"], input[type="search"], input[type="number"], textarea {
+    width: 100%; background: var(--base); border: 1px solid var(--s0); border-radius: 10px; padding: 8px 10px;
+  }
+  textarea { font-family: var(--mono); font-size: 12.5px; resize: vertical; min-height: 64px; }
+  .btn {
+    border: 1px solid var(--s1); background: var(--s0); border-radius: 10px; padding: 7px 12px; cursor: pointer; white-space: nowrap;
+  }
+  .btn:hover { border-color: var(--o0); }
+  .btn.primary { background: var(--accent); color: var(--on-accent); border-color: transparent; font-weight: 600; }
+  .btn.small { padding: 4px 9px; font-size: 13px; }
+  .muted { color: var(--sub); font-size: 13px; }
+
+  .field { display: grid; grid-template-columns: 90px 1fr 52px; align-items: center; gap: 10px; margin: 8px 0; }
+  .field label { color: var(--sub); font-size: 13px; }
+  .field output { font-family: var(--mono); font-size: 13px; text-align: right; }
+  input[type="range"] { width: 100%; accent-color: var(--accent); }
+
+  .seg { display: inline-flex; background: var(--base); border: 1px solid var(--s0); border-radius: 10px; padding: 3px; gap: 3px; }
+  .seg button { border: 0; background: none; padding: 4px 12px; border-radius: 7px; cursor: pointer; color: var(--sub); }
+  .seg button[aria-pressed="true"] { background: var(--s0); color: var(--text); }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    border: 1px solid var(--s1); background: none; border-radius: 999px; padding: 4px 12px; cursor: pointer; color: var(--sub); font-size: 13px;
+  }
+  .pill[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+
+  .preview { border-radius: var(--radius); padding: 18px; display: grid; place-items: center; min-height: 110px; overflow: auto; border: 1px solid var(--s0); }
+  .preview.gh-dark { background: #0d1117; }
+  .preview.gh-light { background: #ffffff; }
+  .preview img { max-width: 100%; height: auto; transition: opacity .15s; }
+  .preview.loading img { opacity: .5; }
+
+  .out { position: relative; margin-bottom: 10px; }
+  .out .btn { position: absolute; top: 6px; right: 6px; }
+  .out textarea { padding-right: 70px; }
+  .note { font-size: 12.5px; color: var(--warn); margin: 6px 0 0; }
+
+  /* ---------- catalogue ---------- */
+  .catalogue { padding: 20px 24px 60px; min-width: 0; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; position: sticky; top: 0; z-index: 2; background: var(--base); padding: 4px 0 12px; }
+  .toolbar input[type="search"] { flex: 1 1 260px; font-size: 16px; padding: 10px 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+  .icon {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px 8px; border-radius: 12px;
+    border: 1px solid transparent; background: var(--mantle); cursor: pointer; position: relative; min-width: 0;
+  }
+  .icon[hidden] { display: none; }
+  .icon:hover { border-color: var(--s1); }
+  .icon[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--mantle)); }
+  .icon[aria-pressed="true"]::after {
+    content: "✓"; position: absolute; top: 5px; right: 7px; font-size: 12px; font-weight: 700; color: var(--accent);
+  }
+  .icon img { width: 44px; height: 44px; }
+  .icon span { font-family: var(--mono); font-size: 11.5px; color: var(--sub); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .icon small { font-size: 10px; color: var(--o0); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: -5px; }
+  .empty { color: var(--sub); padding: 40px 0; text-align: center; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<header>
+  <img src="/icons?i=rust,js,cpp&size=30&anim=wave,shine&perline=3" alt="" width="104" height="36">
+  <h1>Animated Skill Icons</h1>
+  <span class="tag" id="stats">loading icons…</span>
+</header>
+
+<main>
+  <section class="builder" aria-label="Builder">
+    <div class="builder-inner">
+      <div class="head"><h2>Your stack</h2><button class="btn small" id="clear" type="button">Clear</button></div>
+      <div class="chips" id="chips" aria-live="polite"></div>
+      <div class="import">
+        <input type="text" id="importText" placeholder="Paste a skillicons.dev link or rust,js,cpp" aria-label="Import icons">
+        <button class="btn" id="importBtn" type="button">Import</button>
+      </div>
+      <p class="note" id="importNote" hidden></p>
+
+      <h2>Style</h2>
+      <div class="row spread" style="margin-bottom:6px">
+        <span class="muted">Theme</span>
+        <div class="seg" id="theme" role="group" aria-label="Theme">
+          <button type="button" data-v="dark" aria-pressed="true">Dark</button>
+          <button type="button" data-v="light" aria-pressed="false">Light</button>
+        </div>
+      </div>
+      <div class="field"><label for="perline">Per line</label><input type="range" id="perline" min="1" max="50" value="8"><output for="perline" id="perlineOut">8</output></div>
+      <div class="field"><label for="size">Icon size</label><input type="range" id="size" min="16" max="128" step="4" value="48"><output for="size" id="sizeOut">48px</output></div>
+      <div class="field"><label for="speed">Speed</label><input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"><output for="speed" id="speedOut">1×</output></div>
+
+      <h2>Animations <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">— mix as many as you like</span></h2>
+      <div class="pills" id="anims" role="group" aria-label="Animations"></div>
+
+      <div class="head"><h2>Preview</h2>
+        <div class="seg" id="bg" role="group" aria-label="Preview background">
+          <button type="button" data-v="gh-dark" aria-pressed="true">GitHub dark</button>
+          <button type="button" data-v="gh-light" aria-pressed="false">light</button>
+        </div>
+      </div>
+      <div class="preview gh-dark" id="preview"><span class="muted">Your icons will show up here</span></div>
+
+      <h2>Use it</h2>
+      <div class="out"><textarea id="outUrl" rows="2" readonly aria-label="Image URL"></textarea><button class="btn small" data-copy="outUrl" type="button">Copy</button></div>
+      <div class="out"><textarea id="outHtml" rows="4" readonly aria-label="HTML snippet"></textarea><button class="btn small" data-copy="outHtml" type="button">Copy</button></div>
+      <div class="out"><textarea id="outMd" rows="2" readonly aria-label="Markdown snippet"></textarea><button class="btn small" data-copy="outMd" type="button">Copy</button></div>
+      <p class="muted">Tip: GitHub shows README SVGs as images, so animations play on their own – hover effects aren't possible there.</p>
+    </div>
+  </section>
+
+  <section class="catalogue" aria-label="All icons">
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search 3,000+ icons… (rust, linux, figma)" aria-label="Search icons" autofocus>
+      <div class="seg" id="src" role="group" aria-label="Icon source">
+        <button type="button" data-v="all" aria-pressed="true">All</button>
+        <button type="button" data-v="k" aria-pressed="false">Original tiles</button>
+        <button type="button" data-v="s" aria-pressed="false">Brand logos</button>
+      </div>
+      <span class="muted" id="count"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Nothing matches that – try another spelling.</p>
+  </section>
+</main>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const DEFAULT_ANIM = ['pop', 'wave', 'shine'];
+  const state = { icons: [], theme: 'dark', perline: 8, size: 48, speed: 1, anim: [...DEFAULT_ANIM], animations: [] };
+  let catalogue = [], byName = new Map(), cards = new Map();
+
+  // ---------- URL <-> state ----------
+  function readQuery(qs) {
+    const q = new URLSearchParams(qs);
+    const i = q.get('i') || q.get('icons');
+    if (i) state.icons = i.split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+    const t = q.get('theme') || q.get('t'); if (t === 'light' || t === 'dark') state.theme = t;
+    const p = +(q.get('perline') || q.get('p')); if (p >= 1 && p <= 50) state.perline = Math.round(p);
+    const sz = +q.get('size'); if (sz >= 16 && sz <= 128) state.size = sz;
+    const sp = +(q.get('speed') || q.get('s')); if (sp >= .25 && sp <= 4) state.speed = sp;
+    const a = q.get('anim') || q.get('a');
+    if (a !== null) state.anim = a === 'none' ? [] : a.split(',').filter(Boolean);
+  }
+  function query(forThumb) {
+    const q = new URLSearchParams();
+    q.set('i', state.icons.join(','));
+    if (state.theme !== 'dark') q.set('theme', state.theme);
+    if (state.perline !== 15) q.set('perline', state.perline);
+    const animStr = state.anim.join(',');
+    if (animStr !== DEFAULT_ANIM.join(',')) q.set('anim', animStr || 'none');
+    if (state.speed !== 1) q.set('speed', state.speed);
+    if (state.size !== 48) q.set('size', state.size);
+    return q.toString().replace(/%2C/g, ',');
+  }
+  const base = location.origin;
+  const thumb = (id, size = 44) => `/icons?i=${encodeURIComponent(id)}&anim=none&size=${size}&theme=${state.theme}`;
+
+  // ---------- rendering ----------
+  let previewTimer;
+  function update() {
+    // chips
+    const chips = $('chips'); chips.textContent = '';
+    state.icons.forEach((name, idx) => {
+      const c = document.createElement('span');
+      c.className = 'chip' + (byName.size && !byName.has(name) ? ' bad' : '');
+      c.draggable = true; c.dataset.idx = idx;
+      c.innerHTML = `<img alt="" src="${thumb(name, 24)}"><span></span><button type="button" aria-label="Remove ${name}">×</button>`;
+      c.querySelector('span').textContent = name;
+      c.querySelector('button').onclick = () => { state.icons.splice(idx, 1); update(); };
+      chips.appendChild(c);
+    });
+    // selected state in grid
+    const chosen = new Set(state.icons.map(n => byName.get(n) ?? n));
+    for (const [id, el] of cards) el.setAttribute('aria-pressed', chosen.has(id));
+    // controls
+    for (const b of $('theme').children) b.setAttribute('aria-pressed', b.dataset.v === state.theme);
+    $('perline').value = state.perline; $('perlineOut').textContent = state.perline;
+    $('size').value = state.size; $('sizeOut').textContent = state.size + 'px';
+    $('speed').value = state.speed; $('speedOut').textContent = state.speed + '×';
+    for (const b of $('anims').children) {
+      const v = b.dataset.v;
+      b.setAttribute('aria-pressed', v === 'none' ? state.anim.length === 0 : state.anim.includes(v));
+    }
+    // outputs
+    const has = state.icons.length > 0;
+    const url = has ? `${base}/icons?${query()}` : '';
+    $('outUrl').value = url || 'Pick at least one icon';
+    $('outHtml').value = has ? `<p align="center">\n  <img src="${url}" alt="My tech stack" />\n</p>` : '';
+    $('outMd').value = has ? `![My tech stack](${url})` : '';
+    history.replaceState(null, '', has ? `?${query()}` : location.pathname);
+    // preview (debounced so sliders feel smooth)
+    clearTimeout(previewTimer);
+    previewTimer = setTimeout(() => {
+      const pv = $('preview');
+      if (!has) { pv.innerHTML = '<span class="muted">Your icons will show up here</span>'; return; }
+      let img = pv.querySelector('img');
+      if (!img) { pv.textContent = ''; img = new Image(); img.alt = 'Preview'; pv.appendChild(img); }
+      pv.classList.add('loading');
+      img.onload = img.onerror = () => pv.classList.remove('loading');
+      img.src = `/icons?${query()}&_=${Date.now() % 1e6}`; // fresh URL restarts the animation
+    }, 220);
+  }
+
+  function refreshThumbs() {
+    for (const [id, el] of cards) { const img = el.querySelector('img'); img.src = thumb(id); }
+  }
+
+  function buildGrid() {
+    const grid = $('grid'), frag = document.createDocumentFragment();
+    for (const x of catalogue) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'icon'; b.dataset.id = x.id; b.dataset.src = x.src;
+      b.dataset.hay = [x.id, x.title || '', ...(x.aliases || [])].join(' ').toLowerCase();
+      b.setAttribute('aria-pressed', 'false');
+      b.title = [x.title || x.id, x.aliases ? `also: ${x.aliases.join(', ')}` : '', x.lic ? `logo licence: ${x.lic}` : ''].filter(Boolean).join('\n');
+      b.innerHTML = `<img loading="lazy" decoding="async" alt="" width="44" height="44"><span></span>${x.title && x.title.toLowerCase() !== x.id ? '<small></small>' : ''}`;
+      b.querySelector('img').src = thumb(x.id);
+      b.querySelector('span').textContent = x.id;
+      if (b.querySelector('small')) b.querySelector('small').textContent = x.title;
+      b.onclick = () => toggle(x.id);
+      cards.set(x.id, b); frag.appendChild(b);
+    }
+    grid.appendChild(frag);
+  }
+
+  function toggle(id) {
+    const i = state.icons.findIndex(n => (byName.get(n) ?? n) === id);
+    if (i >= 0) state.icons.splice(i, 1); else state.icons.push(id);
+    update();
+  }
+
+  let srcFilter = 'all';
+  function filter() {
+    const term = $('search').value.trim().toLowerCase();
+    let shown = 0;
+    for (const el of cards.values()) {
+      const ok = (srcFilter === 'all' || el.dataset.src === srcFilter) && (!term || el.dataset.hay.includes(term));
+      el.hidden = !ok; if (ok) shown++;
+    }
+    $('count').textContent = `${shown.toLocaleString()} shown`;
+    $('empty').hidden = shown > 0;
+  }
+
+  // ---------- events ----------
+  $('theme').onclick = e => { const v = e.target.dataset.v; if (!v || v === state.theme) return; state.theme = v; update(); refreshThumbs(); };
+  $('bg').onclick = e => {
+    const v = e.target.dataset.v; if (!v) return;
+    for (const b of $('bg').children) b.setAttribute('aria-pressed', b.dataset.v === v);
+    $('preview').className = 'preview ' + v;
+  };
+  $('src').onclick = e => {
+    const v = e.target.dataset.v; if (!v) return; srcFilter = v;
+    for (const b of $('src').children) b.setAttribute('aria-pressed', b.dataset.v === v);
+    filter();
+  };
+  $('perline').oninput = e => { state.perline = +e.target.value; update(); };
+  $('size').oninput = e => { state.size = +e.target.value; update(); };
+  $('speed').oninput = e => { state.speed = +e.target.value; update(); };
+  $('search').oninput = filter;
+  $('search').onkeydown = e => {
+    if (e.key !== 'Enter') return;
+    const first = [...cards.values()].find(el => !el.hidden);
+    if (first) { toggle(first.dataset.id); e.target.select(); }
+  };
+  $('clear').onclick = () => { state.icons = []; update(); };
+  $('importBtn').onclick = doImport;
+  $('importText').onkeydown = e => { if (e.key === 'Enter') doImport(); };
+  function doImport() {
+    const raw = $('importText').value.trim(); if (!raw) return;
+    const qs = raw.includes('?') ? raw.slice(raw.indexOf('?')) : `?i=${raw.replace(/\s+/g, '')}`;
+    readQuery(qs);
+    const unknown = state.icons.filter(n => byName.size && !byName.has(n));
+    state.icons = state.icons.map(n => byName.get(n) ?? n);
+    $('importNote').hidden = !unknown.length;
+    $('importNote').textContent = unknown.length ? `Not found: ${unknown.join(', ')} – search for them on the right.` : '';
+    $('importText').value = '';
+    update(); refreshThumbs();
+  }
+  document.addEventListener('click', e => {
+    const id = e.target.dataset && e.target.dataset.copy; if (!id) return;
+    const ta = $(id); const done = () => { e.target.textContent = 'Copied'; setTimeout(() => (e.target.textContent = 'Copy'), 1200); };
+    (navigator.clipboard ? navigator.clipboard.writeText(ta.value) : Promise.reject()).then(done, () => { ta.select(); document.execCommand('copy'); done(); });
+  });
+
+  // drag to reorder chips
+  let dragIdx = null;
+  $('chips').addEventListener('dragstart', e => { const c = e.target.closest('.chip'); if (!c) return; dragIdx = +c.dataset.idx; c.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; });
+  $('chips').addEventListener('dragover', e => { e.preventDefault(); });
+  $('chips').addEventListener('drop', e => {
+    e.preventDefault(); const c = e.target.closest('.chip'); if (dragIdx === null) return;
+    const to = c ? +c.dataset.idx : state.icons.length - 1;
+    const [m] = state.icons.splice(dragIdx, 1); state.icons.splice(to, 0, m); dragIdx = null; update();
+  });
+  $('chips').addEventListener('dragend', () => { dragIdx = null; update(); });
+
+  // ---------- boot ----------
+  readQuery(location.search);
+  update();
+  fetch('/list').then(r => r.json()).then(data => {
+    catalogue = data.icons;
+    state.animations = data.animations;
+    for (const x of catalogue) {
+      byName.set(x.id, x.id);
+      for (const a of x.aliases || []) if (!byName.has(a)) byName.set(a, x.id);
+    }
+    const pills = $('anims');
+    for (const a of [...data.animations, 'none']) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'pill'; b.dataset.v = a; b.textContent = a;
+      b.onclick = () => {
+        if (a === 'none') state.anim = [];
+        else state.anim = state.anim.includes(a) ? state.anim.filter(x => x !== a) : data.animations.filter(x => x === a || state.anim.includes(x));
+        update();
+      };
+      pills.appendChild(b);
+    }
+    const k = catalogue.filter(x => x.src === 'k').length, s = catalogue.length - k;
+    $('stats').innerHTML = `<b>${catalogue.length.toLocaleString()}</b> icons · ${k} original skillicons tiles + ${s.toLocaleString()} brand logos · <b>${data.animations.length}</b> animations`;
+    state.icons = state.icons.map(n => byName.get(n) ?? n);
+    buildGrid(); filter(); update();
+  }).catch(() => { $('stats').textContent = 'Could not load the icon list – is the server running?'; });
+})();
+</script>
+</body>
+</html>

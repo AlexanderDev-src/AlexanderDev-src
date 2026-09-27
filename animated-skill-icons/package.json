@@ -1,0 +1,22 @@
+{
+  "name": "animated-skill-icons",
+  "version": "1.0.0",
+  "description": "Animated tech-stack icons for GitHub READMEs – ?i=rust,js,cpp like skillicons.dev, but moving",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build:icons": "node scripts/build-icons.mjs",
+    "cli": "node bin/cli.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "simple-icons": "^16.33.0"
+  },
+  "type": "module",
+  "bin": {
+    "animated-skill-icons": "bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
