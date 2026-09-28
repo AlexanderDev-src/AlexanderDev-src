@@ -49,12 +49,12 @@
 
 <p align="center">
   <b>Frontend & Markup</b><br>
-  <a href="https://skillicons.dev"><img src="./assets/skills/frontend.svg" alt="Svelte,Astro, HTML, CSS, Tailwind, Vite, Markdown, LaTeX" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/frontend.svg" alt="Svelte, Astro, HTML, CSS, Tailwind, Vite, Markdown, LaTeX" /></a>
 </p>
 
 <p align="center">
   <b>Backend</b><br>
-  <a href="https://skillicons.dev"><img src="./assets/skills/backend.svg" alt="Spring,FastAPI,Express" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/backend.svg" alt="Spring, FastAPI, Express" /></a>
 </p>
 
 <p align="center">
