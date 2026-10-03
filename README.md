@@ -11,7 +11,6 @@
 
 <h3 align="center">About me</h3>
 
-
 <p align="left">
   I'm Alexander, born 2006, living in Khon Kaen, Thailand, and studying Computer Science at KKU.
   Outside of coursework I build things because I'd rather understand a system than just use it —
@@ -44,7 +43,7 @@
 
 <p align="center">
   <b>Languages & Frameworks</b><br>
-  <a href="https://skillicons.dev"><img src="./assets/skills/languages.svg" alt="Rust, Java, C++, C, Python, TypeScript, JavaScript, React" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/languages.svg" alt="C++, Python, Go, Java, TypeScript, JavaScript, React, C" /></a>
 </p>
 
 <p align="center">
@@ -72,7 +71,7 @@
 <details>
 <summary><b>Simple things</b></summary>
 <br>
-  
+
 ![Top Languages](https://ghstats.dev/api/langs?username=AlexanderDev-src&theme=catppuccin&hide_border=true&hide_title=true&max_langs=12&layout=grid)
 
 </details>
@@ -109,7 +108,6 @@
 </details>
 </div>
 <img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" />
-
 
 <!--
 **AlexanderDev-src/AlexanderDev-src** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
