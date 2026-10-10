@@ -43,7 +43,7 @@
 
 <p align="center">
   <b>Languages & Frameworks</b><br>
-  <a href="https://skillicons.dev"><img src="./assets/skills/languages.svg" alt="C++, Python, Go, Java, TypeScript, JavaScript, React, C" /></a>
+  <a href="https://skillicons.dev"><img src="./assets/skills/languages.svg" alt="C++, Python, Go, Java, TypeScript, Elysia, JavaScript, React, C" /></a>
 </p>
 
 <p align="center">
