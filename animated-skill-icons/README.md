@@ -13,14 +13,14 @@ Animated tech-stack icons for your GitHub README. Works like [skillicons.dev](ht
 
 ## Parameters
 
-| param | values | default |
-|---|---|---|
-| `i` / `icons` | comma-separated names (`rust,js,cpp`), or `all` for every original tile | required |
-| `theme` / `t` | `dark`, `light` | `dark` |
-| `perline` | 1–50 | 15 |
-| `anim` | any mix of `pop,wave,float,bounce,flip,pulse,wiggle,shine`, or `all` / `none` | `pop,wave,shine` |
-| `speed` | 0.25–4 (2 = twice as fast) | 1 |
-| `size` | icon size in px, 16–128 | 48 |
+| param         | values                                                                        | default          |
+| ------------- | ----------------------------------------------------------------------------- | ---------------- |
+| `i` / `icons` | comma-separated names (`rust,js,cpp`), or `all` for every original tile       | required         |
+| `theme` / `t` | `dark`, `light`                                                               | `dark`           |
+| `perline`     | 1–50                                                                          | 15               |
+| `anim`        | any mix of `pop,wave,float,bounce,flip,pulse,wiggle,shine`, or `all` / `none` | `pop,wave,shine` |
+| `speed`       | 0.25–4 (2 = twice as fast)                                                    | 1                |
+| `size`        | icon size in px, 16–128                                                       | 48               |
 
 Names:
 
